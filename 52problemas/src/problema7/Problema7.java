@@ -12,24 +12,21 @@ import java.util.Scanner;
  * @author javiercruz
  */
 public class Problema7 {
-/**
- * 
- * @param args 
- * Introducir tantas frases como queramos y contarlas.
- */
+
+    /**
+     *
+     * @param args Introducir tantas frases como queramos y contarlas.
+     */
     public static void main(String[] args) {
         String preg;
         int cont = 0;
+        System.out.println("Si quieres terminar introduce *");
+        Scanner escaner = new Scanner(System.in);
         do {
-            Scanner escaner = new Scanner(System.in);
-            escaner.next();
+            preg = escaner.nextLine();
             cont++;
-            System.out.println("¿Quiere introducir otra cadena? S/N");
-            Scanner esc= new Scanner(System.in);
-            preg = esc.next();
-        } while ("S".equals(preg) || "s".equals(preg));
-        
-        System.out.println("Introuduciste "+cont+" Frases");
-
+        } while (!"*".equals(preg));
+        cont = cont - 1;
+        System.out.println("Introuduciste " + cont + " Frases");
     }
 }
