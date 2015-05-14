@@ -28,19 +28,28 @@ public class Problema37 {
         }
         System.out.println("Matriz");
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("\nFila "+(i+1));
-            System.out.println("----------------");
             for (int j = 0; j < arr[0].length; j++) {
-                System.out.println("Columna "+(j+1)+"= "+arr[i][j]);
+                System.out.print(arr[i][j]);
+                if (j != arr[i].length-1) {
+                    System.out.print("\t");
+                }
             }
+            System.out.println("|");
         }
+        
         System.out.println("\n Matriz transpuesta");
         for (int i = 0; i < arr[0].length; i++) {
-            System.out.println("\nFila "+(i+1));
-            System.out.println("----------------");
             for (int j = 0; j < arr.length; j++) {
-                System.out.println("Columna "+(j+1)+"= "+arr[j][i]);
+                System.out.print(arr[j][i]);
+                if (i != arr[j].length) {
+                    System.out.print("\t");
+                }
             }
+            System.out.println("|");
         }
+        
+        
+        
+    
     }
 }

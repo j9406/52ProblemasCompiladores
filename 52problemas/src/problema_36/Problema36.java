@@ -13,25 +13,31 @@ import java.util.Random;
  * @since 13/05/2015
  */
 public class Problema36 {
+
     /**
-     * Generar una matriz de 4 filas y 5 columnas con numeros 
-     * aleatorios entre 1 y 100, e imprimirla.
-     * @param args 
+     * Generar una matriz de 4 filas y 5 columnas con numeros aleatorios entre 1
+     * y 100, e imprimirla.
+     *
+     * @param args
      */
     public static void main(String[] args) {
-        int[][] arr= new int[4][5];
-        int num,a=1;
+        int[][] arr = new int[4][5];
+        int num, a = 1;
         Random rnd = new Random();
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                arr[i][j]=(int)(rnd.nextDouble() * 100+1);
+                arr[i][j] = (int) (rnd.nextDouble() * 100 + 1);
             }
         }
         for (int i = 0; i < 4; i++) {
+            System.out.print("|");
             for (int j = 0; j < 5; j++) {
-                System.out.println(a+".  "+arr[i][j]);
-                a++;
+                System.out.print(arr[i][j]);
+                if (i != 4) {
+                    System.out.print("\t");
+                }
             }
+            System.out.println("|");
         }
     }
 }
